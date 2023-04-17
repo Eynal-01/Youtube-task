@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="DesignPatterns_Task8.Views.ShowSubscribersPageUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesignPatterns_Task8.Views"
+             mc:Ignorable="d" 
+             Height="470"
+             Width="820">
+        <Grid Background="gray">
+            <Canvas>
+                <Button Height="40"
+                        Width="100"
+                        Content="Back"
+                        Command="{Binding BackCommand}"
+                        Background="red" 
+                        FontSize="20"
+                        Canvas.Left="10" 
+                        Canvas.Top="400">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <TextBlock Text="Subscribers"
+                           FontSize="40"
+                           Canvas.Left="291"
+                           Canvas.Top="26">
+                </TextBlock>
+
+                <ListBox ItemsSource="{Binding Subscribers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         Height="286" 
+                         Width="534"
+                         Background="gray"
+                         Canvas.Left="138" 
+                         Canvas.Top="87">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Username}" Height="30" FontSize="17"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Canvas>
+        </Grid>
+</UserControl>

@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="DesignPatterns_Task8.Views.AddNewPostPageUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesignPatterns_Task8.Views"
+             mc:Ignorable="d" 
+             Height="470"
+             Width="820">
+    
+        <Grid Background="gray">
+            <Canvas>
+                <Button Height="40"
+                        Width="100"
+                        Content="Back"
+                        Command="{Binding BackCommand}"
+                        Background="red" 
+                        FontSize="20"
+                        Canvas.Left="10" 
+                        Canvas.Top="400" 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <StackPanel Canvas.Left="222" Canvas.Top="41" HorizontalAlignment="Center" Height="393" VerticalAlignment="Top" Width="337">
+
+                    <WrapPanel Margin="10" HorizontalAlignment="Center">
+                        <Button Command="{Binding FromFileCommand}" Content="Load from File..." Margin="0,0,20,0" Background="gray" BorderThickness="0" FontSize="20"></Button>
+                    </WrapPanel>
+
+                    <Rectangle Width="299" Height="250" Stroke="Gray" StrokeDashArray="10" Canvas.Left="150" Canvas.Top="34">
+                        <Rectangle.Fill>
+                            <ImageBrush x:Name="DynamicImage" 
+                                        ImageSource="{Binding ImageSource, UpdateSourceTrigger=PropertyChanged}" 
+                                        Stretch="Fill"></ImageBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock FontSize="16"
+                               Text="Enter title."
+                               Margin="20,0,0,-20">
+                        
+                    </TextBlock>
+
+                    <TextBox Margin="0,20,0,0" 
+                             Height="72"
+                             Width="300"
+                             Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             FontFamily="Comic Sans MS"
+                             FontSize="20"
+                             Background="gray"
+                             TextWrapping="Wrap">
+                    </TextBox>
+
+                </StackPanel>
+                
+                <Button Height="40"
+                        Width="100"
+                        Content="Save"
+                        Command="{Binding SaveCommand}"
+                        Background="SpringGreen" 
+                        Canvas.Left="666" 
+                        Canvas.Top="400" 
+                        FontSize="20"
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Canvas>
+        </Grid>
+</UserControl>
