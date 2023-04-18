@@ -7,18 +7,19 @@
              mc:Ignorable="d" 
  d:DesignHeight="450" 
              d:DesignWidth="800"
-             Height="470"
-             Width="820">
+             Height="450"
+             Width="800">
         <Grid Background="gray">
             <Canvas>
-                <Button Height="40"
+            <Image Source="\Images\youtube.png" Margin="10,10,0,0" Width="200" Height="80"></Image>
+            <Button Height="40"
                         Width="100"
                         FontSize="20"
                         Content="Back"
                         Command="{Binding BackCommand}"
                         Background="red" 
                         Canvas.Left="10" 
-                        Canvas.Top="400">
+                        Canvas.Top="350">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -30,7 +31,7 @@
                            FontSize="50"
                            Foreground="black"
                            Canvas.Left="319" 
-                           Canvas.Top="30"
+                           Canvas.Top="20"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Top">
                 </TextBlock>
@@ -39,7 +40,7 @@
                            FontSize="20"
                            Foreground="black"
                            Canvas.Left="248" 
-                           Canvas.Top="134"
+                           Canvas.Top="100"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center">
                 </TextBlock>
@@ -49,14 +50,14 @@
                          FontSize="20"
                          Padding="10,7"
                          Text="{Binding Username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                         Width="328" Canvas.Left="248" Canvas.Top="167" HorizontalAlignment="Left" VerticalAlignment="Center">
+                         Width="328" Canvas.Left="248" Canvas.Top="130" HorizontalAlignment="Left" VerticalAlignment="Center">
                 </TextBox>
 
                 <TextBlock Text="Password"
                     FontSize="20"
                     Foreground="black"
                     Canvas.Left="248" 
-                    Canvas.Top="207"
+                    Canvas.Top="180"
                     HorizontalAlignment="Center" 
                            VerticalAlignment="Top"/>
 
@@ -67,7 +68,7 @@
                              Padding="10,7" 
                              Width="328" 
                              Canvas.Left="248"
-                             Canvas.Top="239"
+                             Canvas.Top="210"
                              HorizontalAlignment="Center" 
                              VerticalAlignment="Top">
                     <PasswordBox.Resources>
@@ -84,7 +85,7 @@
                     Command="{Binding SignInCommand}"
                     Background="SeaGreen" 
                     Canvas.Left="319" 
-                    Canvas.Top="318" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    Canvas.Top="270" HorizontalAlignment="Left" VerticalAlignment="Top">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="10"/>

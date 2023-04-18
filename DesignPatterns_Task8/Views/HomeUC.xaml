@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" 
              d:DesignWidth="800"
-        Height="510" 
-        Width="835">
+        Height="470" 
+        Width="820">
     <Grid Background="gray">
         <Canvas>
             <Image Source="\Images\youtube.png" Margin="10,10,0,0" Width="300"></Image>

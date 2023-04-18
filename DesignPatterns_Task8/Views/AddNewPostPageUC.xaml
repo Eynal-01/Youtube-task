@@ -5,75 +5,89 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesignPatterns_Task8.Views"
              mc:Ignorable="d" 
-             Height="470"
-             Width="820">
-    
-        <Grid Background="gray">
-            <Canvas>
-                <Button Height="40"
+             Height="450"
+             Width="800">
+
+    <Grid Background="gray">
+        <Canvas>
+            <Image Source="\Images\youtube.png" Margin="10,10,0,0" Width="200" Height="80"></Image>
+            <Button Height="40"
                         Width="100"
                         Content="Back"
                         Command="{Binding BackCommand}"
                         Background="red" 
                         FontSize="20"
                         Canvas.Left="10" 
-                        Canvas.Top="400" 
+                        Canvas.Top="350" 
                         HorizontalAlignment="Center"
                         VerticalAlignment="Top">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="10"></Setter>
-                        </Style>
-                    </Button.Resources>
-                </Button>
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+                    <Button 
+                            Command="{Binding FromFileCommand}" 
+                            Content="Load from File" 
+                            Margin="600,30,20,0" 
+                        Width="150"
+                        Height="50"
+                            Background="DodgerBlue" 
+                            BorderThickness="0" 
+                            FontSize="20">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
 
-                <StackPanel Canvas.Left="222" Canvas.Top="41" HorizontalAlignment="Center" Height="393" VerticalAlignment="Top" Width="337">
+            <StackPanel Canvas.Left="222" Canvas.Top="11" HorizontalAlignment="Center" Height="350" VerticalAlignment="Top" Width="337">
 
-                    <WrapPanel Margin="10" HorizontalAlignment="Center">
-                        <Button Command="{Binding FromFileCommand}" Content="Load from File..." Margin="0,0,20,0" Background="gray" BorderThickness="0" FontSize="20"></Button>
-                    </WrapPanel>
+                <WrapPanel Margin="10" HorizontalAlignment="Center">
+                </WrapPanel>
 
-                    <Rectangle Width="299" Height="250" Stroke="Gray" StrokeDashArray="10" Canvas.Left="150" Canvas.Top="34">
-                        <Rectangle.Fill>
-                            <ImageBrush x:Name="DynamicImage" 
+                <Rectangle Width="299" Height="250" Stroke="Gray" StrokeDashArray="10" Canvas.Left="150" Canvas.Top="34">
+                    <Rectangle.Fill>
+                        <ImageBrush x:Name="DynamicImage" 
                                         ImageSource="{Binding ImageSource, UpdateSourceTrigger=PropertyChanged}" 
                                         Stretch="Fill"></ImageBrush>
-                        </Rectangle.Fill>
-                    </Rectangle>
-                    <TextBlock FontSize="16"
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBlock FontSize="16"
                                Text="Enter title."
                                Margin="20,0,0,-20">
-                        
-                    </TextBlock>
 
-                    <TextBox Margin="0,20,0,0" 
-                             Height="72"
+                </TextBlock>
+
+                <TextBox Margin="0,20,0,0" 
+                             Height="40"
                              Width="300"
                              Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                             FontFamily="Comic Sans MS"
                              FontSize="20"
                              Background="gray"
                              TextWrapping="Wrap">
-                    </TextBox>
+                </TextBox>
 
-                </StackPanel>
-                
-                <Button Height="40"
+            </StackPanel>
+
+            <Button Height="40"
                         Width="100"
                         Content="Save"
                         Command="{Binding SaveCommand}"
                         Background="SpringGreen" 
                         Canvas.Left="666" 
-                        Canvas.Top="400" 
+                        Canvas.Top="350" 
                         FontSize="20"
                         HorizontalAlignment="Left" 
                         VerticalAlignment="Top">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="10"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
-            </Canvas>
-        </Grid>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Canvas>
+    </Grid>
 </UserControl>

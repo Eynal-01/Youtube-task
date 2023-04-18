@@ -9,14 +9,15 @@
              Width="820">
         <Grid Background="gray">
             <Canvas>
-                <Button Height="40"
+            <Image Source="\Images\youtube.png" Margin="10,10,0,0" Width="200" Height="80"></Image>
+            <Button Height="40"
                         Width="100"
                         Content="Back"
                         Command="{Binding BackCommand}"
                         Background="red" 
                         FontSize="20"
                         Canvas.Left="10" 
-                        Canvas.Top="400">
+                        Canvas.Top="350">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -33,6 +34,7 @@
                 <ListBox ItemsSource="{Binding Subscribers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                          Height="286" 
                          Width="534"
+                         BorderThickness="0"
                          Background="gray"
                          Canvas.Left="138" 
                          Canvas.Top="87">

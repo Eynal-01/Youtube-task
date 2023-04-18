@@ -171,16 +171,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\post1.jpeg" />
-    <Resource Include="Images\post2.jpeg" />
-    <Resource Include="Images\post3.jpeg" />
+    <Content Include="Images\post1.jpeg" />
+    <Content Include="Images\post2.jpeg" />
+    <Content Include="Images\post3.jpeg" />
     <Resource Include="Images\post4.jpeg" />
-    <Resource Include="Images\post5.jpeg" />
-    <Resource Include="Images\post6.jpeg" />
-    <Resource Include="Images\post7.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dictionaries\" />
+    <Content Include="Images\post5.jpeg" />
+    <Content Include="Images\post6.jpeg" />
+    <Content Include="Images\post7.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\youtube.png" />

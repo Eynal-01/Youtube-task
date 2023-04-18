@@ -5,19 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesignPatterns_Task8.Views"
              mc:Ignorable="d" 
-            Height="470"
-             Width="820">
+            Height="450"
+             Width="800">
    
         <Grid Background="gray">
             <Canvas>
-                <Button Height="40"
+            <Image Source="\Images\youtube.png" Margin="10,10,0,0" Width="200" Height="80"></Image>
+            <Button Height="40"
                         Width="100"
                         Content="Back"
                         Command="{Binding BackCommand}"
                         Background="red" 
                         FontSize="20"
                         Canvas.Left="10" 
-                        Canvas.Top="400">
+                        Canvas.Top="350">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -27,12 +28,12 @@
 
                 <TextBlock Text="My Posts"
                            FontSize="40"
-                           Canvas.Left="332"
+                           Canvas.Left="300"
                            Canvas.Top="2" HorizontalAlignment="Left" VerticalAlignment="Center">
                 </TextBlock>
 
                 <ListBox x:Name="PostLB" 
-                         Height="402" 
+                         Height="302" 
                          Width="383" 
                          Canvas.Left="235" 
                          BorderThickness="0"

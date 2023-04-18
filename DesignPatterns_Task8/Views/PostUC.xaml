@@ -11,20 +11,13 @@
              Margin="33,0,0,40  ">
     <Grid Background="gray">
         <StackPanel>
-            <Rectangle Width="300" Height="303" Stroke="Gray" StrokeDashArray="10" Canvas.Left="150" Canvas.Top="34">
+            <Rectangle Width="280" Height="280" Stroke="Gray" StrokeDashArray="10" Canvas.Left="150" Canvas.Top="34">
                 <Rectangle.Fill>
                     <ImageBrush x:Name="DynamicImage" 
                                 ImageSource="{Binding ImageSource, UpdateSourceTrigger=PropertyChanged}" 
                                 Stretch="Fill"></ImageBrush>
                 </Rectangle.Fill>
             </Rectangle>
-            <TextBlock FontSize="26"
-                       Text="{Binding Text}"
-                       FontWeight="Medium"
-                       FontFamily="Comic Sans MS"
-                       TextAlignment="Center"
-                       Margin="30">
-            </TextBlock>
         </StackPanel>
     </Grid>
 </UserControl>

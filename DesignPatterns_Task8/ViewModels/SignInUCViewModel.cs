@@ -41,7 +41,6 @@ namespace DesignPatterns_Task8.ViewModels
                             if (sub.Password == PasswordBox.Password)
                             {
                                 App.Youtuber.Notify();
-                                MessageBox.Show($"Welcome, {Username}");
                                 App.MyGrid.Children.RemoveAt(0);
                                 var subscriberView = new SubscriberPageUC();
                                 var subscriberViewModel = new SubscriberPageUCViewModel(App.Youtuber.GetSubscribers()[x] as Subscriber);

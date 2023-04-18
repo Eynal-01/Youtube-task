@@ -5,46 +5,47 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesignPatterns_Task8.Views"
              mc:Ignorable="d" 
-            Height="470"
-             Width="820">
-        <Grid Background="gray">
-            <Canvas>
-                <Button Height="40"
+             Height="450"
+             Width="800">
+    <Grid Background="gray">
+        <Canvas>
+            <Image Source="\Images\youtube.png" Margin="10,10,0,0" Width="200" Height="80"></Image>
+            <Button Height="40"
                         Width="100"
                         Content="Back"
                         Command="{Binding BackCommand}"
                         Background="red" 
                         FontSize="20"
                         Canvas.Left="10" 
-                        Canvas.Top="400">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="10"></Setter>
-                        </Style>
-                    </Button.Resources>
-                </Button>
+                        Canvas.Top="350">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
-                <TextBlock Text="Youtuber's posts"
+            <TextBlock Text="Youtuber's posts"
                            FontSize="40"
-                           Canvas.Left="253"
+                           Canvas.Left="243"
                            Canvas.Top="7" HorizontalAlignment="Left" VerticalAlignment="Top">
-                </TextBlock>
+            </TextBlock>
 
-                <ListBox x:Name="PostLB" 
+            <ListBox x:Name="PostLB" 
                          ItemsSource="{Binding Posts, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                         Height="402" 
-                         Background="Gray"
-                         BorderThickness="0"
+                         Height="380" 
+                         Background="Gray" 
+                         BorderThickness="0" 
                          Width="383" 
                          Canvas.Left="235" 
                          Canvas.Top="63"
                          HorizontalAlignment="Left" 
                          VerticalAlignment="Center">
-                </ListBox>
+            </ListBox>
 
-                <Image>
-                    
-                </Image>
-            </Canvas>
-        </Grid>
+            <Image>
+
+            </Image>
+        </Canvas>
+    </Grid>
 </UserControl>
